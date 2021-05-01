@@ -1,0 +1,6 @@
+{
+  "prettier.documentSelectors": [
+    "**/*.{ts,js}"
+  ],
+  "prettier.requireConfig": true
+}

@@ -1,0 +1,18 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 10px;
+
+  .col {
+    display: flex;
+  }
+
+  h1 {
+    margin-bottom: 20px;
+  }
+}
+
+.Results {
+  display: flex;
+  align-items: center;
+}

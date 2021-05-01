@@ -1,0 +1,7 @@
+{
+  "name": "link-station",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": ["api", "client"],
+  "author": "Miron Machnicki"
+}
