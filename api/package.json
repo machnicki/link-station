@@ -17,6 +17,7 @@
     "build": "sls package",
     "deploy": "sls deploy",
     "test": "jest",
-    "pretty": "yarn prettier --write ."
+    "pretty": "yarn prettier --write .",
+    "remove": "sls remove"
   }
 }
