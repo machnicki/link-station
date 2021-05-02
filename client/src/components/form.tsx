@@ -1,6 +1,6 @@
 import ListGroup from "react-bootstrap/ListGroup";
 
-import { Coordinates } from "../utils/types";
+import { Coordinates } from "link-station-api/src/utils/types";
 
 export const Form = ({
   devices,

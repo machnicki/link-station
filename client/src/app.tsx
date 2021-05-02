@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-import { Coordinates } from "./utils/types";
+import { Coordinates } from "link-station-api/src/utils/types";
 import { Form } from "./components/form";
 import { Results } from "./components/results";
 

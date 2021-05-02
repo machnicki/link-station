@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 
-import { Coordinates } from "../utils/types";
-import { StationWithPower } from "../linkStation/types";
-import { findBestLinkStation } from "../linkStation/findBestLinkStation";
+import { Coordinates } from "link-station-api/src/utils/types";
+import { StationWithPower } from "link-station-api/src/linkStation/types";
+import { findBestLinkStation } from "link-station-api/src/linkStation/findBestLinkStation";
 
 export const Results = ({ device: _device }: { device?: Coordinates }) => {
   const [device, setDevice] = useState<Coordinates | undefined>();
