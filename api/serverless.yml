@@ -1,5 +1,7 @@
 service: link-station
 frameworkVersion: "2"
+package:
+  individually: true
 
 provider:
   name: aws
@@ -9,13 +11,19 @@ provider:
   lambdaHashingVersion: 20201221
 
 plugins:
-  - serverless-plugin-typescript
+  - serverless-webpack
   - serverless-offline
 
 functions:
-  hello:
-    handler: handler.hello
+  bestLinkStation:
+    handler: src/handlers/bestLinkStation.handler
     events:
       - httpApi:
-          path: /link-station
+          path: /best-link-station
           method: get
+
+custom:
+  webpack:
+    webpackConfig: "webpack.config.js"
+    packager: "yarn"
+    includeModules: true
