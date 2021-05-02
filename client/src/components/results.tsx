@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 import { Coordinates } from "link-station-api/src/utils/types";
-import { StationWithPower } from "link-station-api/src/linkStation/types";
+import { Response as BestLinkResponse } from "link-station-api/src/services/bestLinkStationService";
 
 import { findBestLinkStation } from "../api/findBestLinkStation";
 
@@ -9,7 +9,7 @@ export const Results = ({ device: _device }: { device?: Coordinates }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [device, setDevice] = useState<Coordinates | undefined>();
   const [bestStation, setBestStation] = useState<
-    StationWithPower | undefined
+    BestLinkResponse | undefined
   >();
 
   useEffect(() => {

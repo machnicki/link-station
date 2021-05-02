@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#App should have proper structure 1`] = `
+<div>
+  <div
+    class="App"
+  >
+    <h1>
+      Find the best link station
+    </h1>
+    <div
+      class="container"
+    >
+      <div
+        class="row"
+      >
+        <div
+          class="col"
+        >
+          <div>
+            <div
+              class="list-group"
+            >
+              <button
+                class="list-group-item list-group-item-action"
+              >
+                Device with coordinates X: 0, Y: 0
+              </button>
+              <button
+                class="list-group-item list-group-item-action"
+              >
+                Device with coordinates X: 100, Y: 100
+              </button>
+              <button
+                class="list-group-item list-group-item-action"
+              >
+                Device with coordinates X: 15, Y: 10
+              </button>
+              <button
+                class="list-group-item list-group-item-action"
+              >
+                Device with coordinates X: 18, Y: 18
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col"
+        >
+          <div
+            class="Results"
+          >
+            <h2>
+              Choose device
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

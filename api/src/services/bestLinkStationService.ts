@@ -5,7 +5,7 @@ type Request = {
   coordinates: string;
 };
 
-type Response =
+export type Response =
   | {
       station: [x: number, y: number, r: number];
       power: number;
