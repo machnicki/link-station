@@ -13,7 +13,11 @@ export const Form = ({
     <div>
       <ListGroup defaultActiveKey="#link1">
         {devices.map((device) => (
-          <ListGroup.Item action onClick={() => onSubmit(device)}>
+          <ListGroup.Item
+            key={device.join()}
+            action
+            onClick={() => onSubmit(device)}
+          >
             {`Device with coordinates X: ${device[0]}, Y: ${device[1]}`}
           </ListGroup.Item>
         ))}

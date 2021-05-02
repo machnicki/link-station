@@ -20,10 +20,12 @@ functions:
     events:
       - httpApi:
           path: /best-link-station
-          method: get
+          method: post
 
 custom:
   webpack:
     webpackConfig: "webpack.config.js"
     packager: "yarn"
     includeModules: true
+  serverless-offline:
+    httpPort: 4000

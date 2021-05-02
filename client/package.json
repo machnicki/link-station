@@ -25,7 +25,7 @@
     "test": "react-scripts test --env=jsdom",
     "pretty": "yarn prettier --write .",
     "eject": "react-scripts eject",
-    "deploy": "node ./deploy.js"
+    "deploy": "yarn build && node ./deploy.js"
   },
   "browserslist": {
     "production": [

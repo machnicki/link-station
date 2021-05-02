@@ -1,13 +1,14 @@
+import { bestLinkStationService } from "../services/bestLinkStationService";
+
 export const handler = async (event) => {
+  const response = await bestLinkStationService(JSON.parse(event.body));
+
   return {
     statusCode: 200,
-    body: JSON.stringify(
-      {
-        station: [0, 0, 1],
-        power: 1
-      },
-      null,
-      2
-    )
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Credentials": true
+    },
+    body: JSON.stringify(response || {}, null, 2)
   };
 };
