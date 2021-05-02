@@ -3,27 +3,27 @@ import { StationWithPower } from "../linkStation/types";
 import { findBestLinkStation } from "../linkStation/findBestLinkStation";
 
 type Request = {
-  coordinates: Coordinates;
+  coordinates: string;
 };
 
 type Response = StationWithPower | undefined;
 
-const validateRequest = (params: Request): void => {
-  console.log("===> params", params);
-
-  if (
-    !(Array.isArray(params?.coordinates) && params?.coordinates.length === 2)
-  ) {
+const validateRequest = (coordinates: any[]): void => {
+  if (!(coordinates && coordinates.length === 2)) {
     throw new Error("You must pass coordinates parameters in proper format");
   }
 
-  if (!params.coordinates.every((coord) => Number.isInteger(coord))) {
+  if (!coordinates.every((coord) => Number.isInteger(coord))) {
     throw new Error("coordinates must be integer");
   }
 };
 
 export const bestLinkStationService = (params: Request): Response => {
-  validateRequest(params);
+  const coordinates = params?.coordinates
+    ?.split(",")
+    .map((coord) => parseInt(coord, 10));
 
-  return findBestLinkStation(params.coordinates);
+  validateRequest(coordinates);
+
+  return findBestLinkStation(coordinates as Coordinates);
 };

@@ -1,7 +1,7 @@
 import { bestLinkStationService } from "../services/bestLinkStationService";
 
 export const handler = async (event) => {
-  const response = await bestLinkStationService(JSON.parse(event.body));
+  const response = await bestLinkStationService(event.queryStringParameters);
 
   return {
     statusCode: 200,
